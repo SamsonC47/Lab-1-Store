@@ -27,7 +27,7 @@ public class StoreTester {
     }
 
     @Test
-    public void updateLocationAndGetAllPhonesTest(){
+    public void updateLocationAndGetPhonesTest(){
         Store store = new Store();
 
         Phone phoneOne = new Phone("iPhone 16","bag",5000,"Smartphone",256,
@@ -83,7 +83,7 @@ public class StoreTester {
         store.updateItems("phone","location","chair");
         store.updateItems("magazine","name","Python learning");
 
-        ArrayList<Phone> allPhones = store.getAllPhones();
+        ArrayList<Phone> allPhones = store.getPhones();
         for(Phone phone: allPhones){
             assertEquals("chair",phone.getLocation());
         }
